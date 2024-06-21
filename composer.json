@@ -1,0 +1,10 @@
+{
+    "name": "shy9x/pract_blog",
+    "type": "project",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "App\\": "api"
+        }
+    }
+}

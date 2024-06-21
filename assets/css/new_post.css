@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main .inner_container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+main .inner_container > div {
+    margin: 1rem 0;
+}
+
+.note-editable {
+    background: #fff;
+}
+
+main .inner_container .note-editor {
+    margin-top: 0;
+}
+
+label, p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+label span {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+input, select {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+select {
+    padding: .5rem;
+}
+
+button  {
+    display: inline-block;
+    padding: .5rem 1rem;
+    color: white;
+    background: #548eaa;
+    border: 1px solid #548eaa;
+    margin: 1rem 0;
+    border-radius: .25rem;
+    transition: all .5s;
+    font-size: 1rem;
+}

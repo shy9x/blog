@@ -1,0 +1,139 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+main .inner_container {
+    padding-right: 200px;
+    box-sizing: border-box;
+}
+
+.trending {
+    position: fixed;
+    top: 4.5rem;
+    width: calc(200px - 1rem);
+    background: #fff;
+    right: 0;
+    left: 1024px;
+    margin: auto;
+    transform: translateX(-50%);
+}
+
+.trending>h2 {
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+
+.trending .post {
+    padding-top: 0;
+}
+
+.trending .post h2 {
+    border-top: 1px solid #d5d5d5;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    padding-top: 1rem;
+}
+
+.post, .filter {
+    background: #fff;
+    padding: 1rem;
+    display: block;
+}
+
+.posts .post, .filter {
+    margin: 1rem 0;
+}
+
+.post .post_info {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.post .post_info .username {
+    font-weight: bold;
+}
+
+.posts .post>h2 {
+    margin-bottom: 2rem;
+}
+
+.cover {
+    margin-bottom: 1rem;
+    width: 100%;
+    max-height: 45vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.cover img {
+    max-width: 100%;
+}
+
+.preview {
+    text-align: justify;
+}
+
+.post a {
+    padding: .6rem .7rem;
+    display: inline-block;
+    color: #31a8eb;
+    border: 1px solid #31a8eb;
+    margin: 1rem 0;
+    border-radius: 5px;
+    transition: all .5s;
+}
+
+.post a:hover {
+    color: #fff;
+    background: #31a8eb;
+}
+
+.post .post_stats {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.post .post_stats img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.post .post_stats .stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.post .post_stats .stat p {
+    font-size: 1.1rem;
+}
+
+@media screen and (max-width: 600px) {
+    main .inner_container {
+        padding-right: 0;
+    }
+
+    .cover, .preview {
+        display: none;
+    }
+
+    .posts .post >h2 {
+        margin-bottom: 0;
+    }
+
+    .post .post_stats {
+        display: inline-flex;
+        margin-left: 1rem;
+    }
+
+    .post a {
+        margin-bottom: 0;
+    }
+}

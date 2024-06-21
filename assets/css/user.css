@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.inner_container {
+    flex: 1;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+}
+
+main .inner_container>div {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    margin: auto;
+    width: 50%;
+    display: none;
+}
+
+main .inner_container>div.active {
+    display: block;
+}
+
+form, .switch {
+    padding: 1rem;
+    background: #fff;
+}
+
+form label,
+form input:not([type=checkbox]) {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+}
+
+form input:not([type=checkbox]) {
+    margin-bottom: 1.5rem;
+}
+
+form button {
+    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    background: #31a8eb;
+    color: #fff;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    transition: background-color .4s;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background: #257daf;
+}
+
+.switch {
+    margin: 1rem 0;
+    display: flex;
+    gap: 0.8rem;
+    justify-content: center;
+}
+
+.switch button {
+    background: none;
+    font-size: 1rem;
+    color: #31a8eb;
+}
+
+@media screen and (max-width: 600px) {
+    main .inner_container>div {
+        width: 90%;
+        margin-top: 1rem;
+    }
+
+    .switch {
+        flex-direction: column;
+    }
+
+    .switch p {
+        text-align: center;
+    }
+}

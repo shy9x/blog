@@ -1,0 +1,166 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.post,
+.comments {
+    margin: 1rem 0;
+    background: #fff;
+    padding: 1rem;
+}
+
+.tags a {
+    color: #31a8eb;
+    transition: all 0.5s linear;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 0.25rem;
+}
+
+.tags a:hover {
+    color: #174a68;
+    border-bottom-color: #31a8eb;
+}
+
+.post .post_info,
+.comments .comment_info {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.post .post_info .username,
+.comments .comment_info .username {
+    font-weight: bold;
+}
+
+.post>h2 {
+    margin-bottom: 2rem;
+}
+
+.post img {
+    max-width: 100%;
+    max-height: 45vh;
+}
+
+.cover {
+    margin-bottom: 1rem;
+    width: 100%;
+    max-height: 45vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.cover img {
+    max-width: 100%;
+}
+
+.content * {
+    word-break: break-word;
+    white-space: normal;
+}
+
+.post .tags {
+    margin-top: 1rem;
+}
+
+.post .post_stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.post .post_stats img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.post .post_stats .stat {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.post .post_stats .stat p {
+    font-size: 1.1rem;
+}
+
+.comments h2 {
+    margin-bottom: 0;
+}
+
+.comments .comment:not(:last-child) {
+    margin-bottom: 3rem;
+}
+
+.comments form {
+    margin: 1rem 0;
+}
+
+.comments form label {
+    margin-bottom: 0.5rem;
+}
+
+.comments form label,
+.comments form textarea {
+    display: block;
+    width: 100%;
+}
+
+.comments form textarea {
+    padding: 1rem;
+    resize: none;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.comments button {
+    display: inline-block;
+    padding: .5rem 1rem;
+    color: #31a8eb;
+    border: 1px solid #31a8eb;
+    margin: 1rem 0;
+    background-color: white;
+    border-radius: .25rem;
+    transition: all .5s;
+    font-size: 1rem;
+}
+
+.comments>button {
+    margin-bottom: 2rem;
+}
+
+.button-delete {
+    display: grid;
+    justify-content: right;
+    margin-top: -30px;
+}
+
+.button-delete button {
+    display: inline-block;
+    padding: .5rem 1rem;
+    color: #31a8eb;
+    border: 1px solid #31a8eb;
+    margin: 0;
+    background-color: white;
+    border-radius: .25rem;
+    transition: all .5s;
+}
+
+button:hover {
+    color: #fff;
+    background-color: #31a8eb;
+}
+
+@media screen and (max-width: 600px) {
+    .tags a {
+        padding: .5rem;
+        display: inline-block;
+        text-align: justify;
+    }
+}
